@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MwSt-Rechner</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+
+<body>
+    <section>
+        <!-- Brutto/Netto auswählen -->
+        <div>
+            <form action="">
+                <label for="">Was soll berechnet werden?</label>
+                <br>
+                <select name="MwSt" id="brutto-netto">
+                    <option value="brutto">Brutto</option>
+                    <option value="netto">Netto</option>
+                </select>
+                <label for="" id="brutto-netto-description">Mehrwertsteuer aufschlagen(Netto zu
+                    Brutto)</label>
+            </form>
+        </div>
+        <!-- Mehrwertsteuersatz auswählen -->
+        <div>
+            <form action="">
+                <label for="">Wähle den Mehrwertsteuersatz</label>
+                <br>
+                <select name="MwSt" id="percentValue">
+                    <option value="seven%">7%</option>
+                    <option value="nineTeen%">19%</option>
+                </select>
+            </form>
+        </div>
+        <!-- Betrag eingeben -->
+        <div>
+            <form action="">
+                <label for="">Nettobetrag (Preis ohne Mehrwertsteuer) in Euro</label>
+                <br>
+                <input type="number" name="" id="price">
+            </form>
+        </div>
+        <!-- Button BERECHNEN -->
+        <div>
+            <input type="button" value="BERECHNEN" onclick="calculate()">
+        </div>
+        <!-- Ausgabe Bereich -->
+        <p>Ergebnis</p>
+        <div>
+            <h4>Mehrwertsteuerbetrag</h4>
+            <h3 id="ausgabeMwSt">...</h3>
+        </div>
+        <div>
+            <h4>Bruttobetrag (Endpreis)</h4>
+            <h3 id="ausgabeEndpreis">...</h3>
+        </div>
+    </section>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap');
+
+@mixin divStyle {
+    background: #ccc;
+    padding: 5px 0px;
+    margin: 2px 0px;
+}
+
+@mixin labelStyle{
+    display: inline-block;
+    padding: 5px 0px;
+}
+/*===== Global Styles ======*/
+p{
+   color: #4e8eca;
+}
+h3, h4{
+    margin: 5px;
+}
+
+/*===== Section Styles ======*/
+section{
+    border: 2px solid #000;
+    border-radius: 5px;
+    width: 450px;
+    margin: auto;
+    font-family: 'Ubuntu Mono', monospace;
+    /*===== Brutto/Nett auswählen ======*/ 
+    div:nth-of-type(1){
+        @include divStyle;
+        margin-top: 0px;
+        label{
+            @include labelStyle;
+        }
+    }
+    /*===== Mehrwertsteuersatz auswählen ======*/ 
+    div:nth-of-type(2){
+        @include divStyle;
+        label{
+            @include labelStyle;
+        }
+    }
+    /*===== Betrag eingeben ======*/ 
+    div:nth-of-type(3){
+        @include divStyle;
+        #price{
+            margin: 5px 0px;
+            width: 60px;
+            height: 20px;
+        }
+    }
+    /*===== Button BERECHNEN ======*/ 
+    div:nth-of-type(4){
+        padding: 10px 0px 10px 0px;
+        text-align: center;
+        border-bottom: 2px solid black;
+        input{
+            width: 70%;
+            background: #236ca3;
+            color: #fff;
+            padding: 8px 0px;
+            border-radius: 5px;
+        }
+    }
+    /*===== Ausgabe Bereich ======*/ 
+    div:nth-of-type(5){
+        @include divStyle;
+    }
+    div:nth-of-type(6){
+        @include divStyle;
+        margin-bottom: 0px;
+    }
+}
